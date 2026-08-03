@@ -1,11 +1,11 @@
 import React from 'react'
 // import Carousel from "./Carousel";
-//import proyecto1 from "../assets/proyecto1.png";
+import proyecto1 from "../assets/proyecto1.png";
 
 const Certifications = () => {
     const certificaciones = [
       {
-        image: 'proyecto1',
+        image: 'Bootstrap',
         title: "API de tareas",
         description:
           "API REST creada con Django REST Framework y JWT.",

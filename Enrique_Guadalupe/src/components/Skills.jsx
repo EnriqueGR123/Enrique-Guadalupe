@@ -1,12 +1,9 @@
 import React from 'react'
 
-
-const Skills = () => {
+export default function Skills() {
   return (
     <div>
-      
+      Habilidades
     </div>
   )
 }
-
-export default Skills
