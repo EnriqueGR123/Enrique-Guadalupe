@@ -1,18 +1,34 @@
 const Contact = () => {
   return (
-    <div className="container contact">
-      <h2>Contacto</h2>
+    <div className="hero-contact">
 
-      <p> correo@email.com</p>
+          <p className="contact-label">
+            CONTACTO
+          </p>
 
-      <p>LinkedIn</p>
+          <div className="contact-line"></div>
 
-      <p> GitHub</p>
+          <a href="enkikegpe99@gmail.com">
+            Email
+          </a>
 
-      <button className="btn">
-        Descargar CV
-      </button>
-    </div>
+          <a
+            href="https://github.com/EnriqueGR123"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/enrique-gabriel-santos-guadalupe-5b0a852a4"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+        </div>
   );
 };
 

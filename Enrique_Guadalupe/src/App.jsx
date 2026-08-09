@@ -5,7 +5,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-
+import Certifications from "./components/Certifications";
 function App() {
   return (
     <>
@@ -13,24 +13,26 @@ function App() {
 
       <main>
         <section id="inicio">
-          <Hero />
+          <Hero  />
         </section>
 
         <section id="sobre-mi">
           <About />
         </section>
-
-        <section id="habilidades">
-          <Skills />
+        
+        <section id="certificaciones" >
+          <Certifications />
         </section>
 
         <section id="proyectos">
           <Projects />
         </section>
 
-        <section id="contacto">
-          <Contact />
+        <section id="habilidades">
+          <Skills />
         </section>
+
+        
       </main>
     </>
   );

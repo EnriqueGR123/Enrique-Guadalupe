@@ -36,23 +36,21 @@ function Navbar() {
                 Sobre mí
               </a>
             </li>
-
             <li className="nav-item">
-              <a className="nav-link" href="#habilidades">
-                Habilidades
-              </a>
+              <a className="nav-link" href="#certificaciones">
+                Certificaciones
+              </a>  
             </li>
-
-
             <li className="nav-item">
               <a className="nav-link" href="#proyectos">
                 Proyectos
               </a>
             </li>
 
+            
             <li className="nav-item">
-              <a className="nav-link" href="#contacto">
-                Contacto
+              <a className="nav-link" href="#habilidades">
+                Habilidades
               </a>
             </li>
           </ul>

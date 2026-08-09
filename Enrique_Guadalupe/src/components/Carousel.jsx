@@ -1,29 +1,19 @@
-import React from "react";
 
 function Carousel({ items }) {
   return (
+
+   
+      
     <div
       id="portfolioCarousel"
-      className="carousel slide"
+      className="portfolio-carousel carousel slide"
       data-bs-ride="carousel"
     >
-      {/* Indicadores */}
-      <div className="carousel-indicators">
-        {items.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            data-bs-target="#portfolioCarousel"
-            data-bs-slide-to={index}
-            className={index === 0 ? "active" : ""}
-            aria-current={index === 0 ? "true" : "false"}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
-      </div>
 
-      {/* Slides */}
-      <div className="carousel-inner rounded">
+      {/* SLIDES */}
+
+      <div className="carousel-inner">
+
         {items.map((item, index) => (
           <div
             key={index}
@@ -31,18 +21,17 @@ function Carousel({ items }) {
               index === 0 ? "active" : ""
             }`}
           >
+
             <img
               src={item.image}
-              className="d-block w-100"
               alt={item.title}
-              style={{
-                height: "400px",
-                objectFit: "cover",
-              }}
+              className="portfolio-image image-fluid"
             />
 
-            <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
-              <h5>{item.title}</h5>
+            <div className="portfolio-info">
+
+              <h3>{item.title}</h3>
+
               <p>{item.description}</p>
 
               {item.link && (
@@ -50,41 +39,67 @@ function Carousel({ items }) {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary"
+                  className="portfolio-link"
                 >
-                  Ver proyecto
+                  Ver proyecto →
                 </a>
               )}
+
             </div>
+
           </div>
         ))}
+
       </div>
 
-      {/* Botón anterior */}
+
+      {/* INDICADORES */}
+
+      <div className="carousel-indicators">
+
+        {items.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            data-bs-target="#portfolioCarousel"
+            data-bs-slide-to={index}
+            className={index === 0 ? "active" : ""}
+            aria-current={index === 0 ? "true" : undefined}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
+
+      </div>
+
+
+      {/* CONTROLES */}
+
       <button
-        className="carousel-control-prev"
+        className="carousel-control-prev portfolio-control"
         type="button"
         data-bs-target="#portfolioCarousel"
         data-bs-slide="prev"
       >
-        <span className="carousel-control-prev-icon" />
+        <span className="portfolio-arrow">←</span>
+
         <span className="visually-hidden">
           Anterior
         </span>
       </button>
 
-      {/* Botón siguiente */}
       <button
-        className="carousel-control-next"
+        className="carousel-control-next portfolio-control"
         type="button"
         data-bs-target="#portfolioCarousel"
         data-bs-slide="next"
       >
-        <span className="carousel-control-next-icon" />
+        <span className="portfolio-arrow">→</span>
+
         <span className="visually-hidden">
           Siguiente
         </span>
       </button>
+
     </div>
   );
 }

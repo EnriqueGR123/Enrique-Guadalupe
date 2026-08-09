@@ -1,33 +1,65 @@
 import React from 'react'
-// import Carousel from "./Carousel";
-import proyecto1 from "../assets/proyecto1.png";
+import backend from './assets/backend.jpeg'
+import bootstrap from './assets/bootstrap.jpeg'
+import programming from './assets/programming_python.jpeg'
+import react from './assets/react.jpeg'
+import db from './assets/db.jpeg'
+import version from './assets/version.jpeg'
+
+import Carousel from './Carousel'
 
 const Certifications = () => {
     const certificaciones = [
       {
-        image: 'Bootstrap',
-        title: "API de tareas",
+        image: backend,
+        title: "Introduction to Back-End Development",
         description:
           "API REST creada con Django REST Framework y JWT.",
-        link: "https://github.com/usuario/proyecto"
       },
       {
-        image: 'proyecto2',
-        title: "Sistema de inventario",
+        image: react,
+        title: "React & TypeScript - The Practical Guide",
         description:
           "Aplicación web con React y Django.",
-        link: "https://github.com/usuario/inventario"
-      }
+      },
+      {
+        image: db,
+        title: "ntroduction to Databases for Back-End Development",
+        description:
+          "Aplicación web con React y Django.",
+      },
+      {
+        image: programming,
+        title: "Programming in Python",
+        description:
+          "Aplicación web con React y Django.",
+      },
+      {
+        image: bootstrap,
+        title: "Bootstrap 5 y SASS - La Guía Práctica",
+        description:
+          "Aplicación web con React y Django.",
+      },
+      {
+        image: version,
+        title: "Version Control",
+        description:
+          "Aplicación web con React y Django.",
+        //link: "https://github.com/usuario/inventario"
+      },
     ];
 
 
   return (
-    <section id="projects">
-      <h2 className="mb-4">
-        Mis certificaciones
-      </h2>
+    <section className="certificaciones" id="sobre-mi">
+      
 
-      <Carousel items={certificaciones} />
+          <div>
+              <Carousel items={certificaciones} />
+          </div>
+
+
+
     </section>
   );
 }
