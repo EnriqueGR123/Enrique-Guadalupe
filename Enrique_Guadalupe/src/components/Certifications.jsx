@@ -51,12 +51,10 @@ const Certifications = () => {
 
 
   return (
-    <section className="certificaciones" id="sobre-mi">
+    <section>
       
 
-          <div>
-              <Carousel items={certificaciones} />
-          </div>
+  <Carousel items={certificaciones} carouselId="certificationsCarousel" />
 
 
 

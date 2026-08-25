@@ -1,11 +1,7 @@
-
-function Carousel({ items }) {
+function Carousel({ items, carouselId = "portfolioCarousel" }) {
   return (
-
-   
-      
     <div
-      id="portfolioCarousel"
+      id={carouselId}
       className="portfolio-carousel carousel slide"
       data-bs-ride="carousel"
     >
@@ -28,11 +24,14 @@ function Carousel({ items }) {
               className="portfolio-image image-fluid"
             />
 
+            <br />
+            <br />
+
             <div className="portfolio-info">
 
               <h3>{item.title}</h3>
 
-              <p>{item.description}</p>
+              <p>{item.description}</p><br />
 
               {item.link && (
                 <a
@@ -61,43 +60,56 @@ function Carousel({ items }) {
           <button
             key={index}
             type="button"
-            data-bs-target="#portfolioCarousel"
+            data-bs-target={`#${carouselId}`}
             data-bs-slide-to={index}
             className={index === 0 ? "active" : ""}
-            aria-current={index === 0 ? "true" : undefined}
+            aria-current={
+              index === 0 ? "true" : undefined
+            }
             aria-label={`Slide ${index + 1}`}
           />
         ))}
 
-      </div>
+      </div> <br /><br />
 
 
-      {/* CONTROLES */}
+      {/* BOTÓN ANTERIOR */}
 
       <button
         className="carousel-control-prev portfolio-control"
         type="button"
-        data-bs-target="#portfolioCarousel"
+        data-bs-target={`#${carouselId}`}
         data-bs-slide="prev"
       >
-        <span className="portfolio-arrow">←</span>
+
+        <span className="portfolio-arrow">
+          ←
+        </span>
 
         <span className="visually-hidden">
           Anterior
         </span>
+
       </button>
+
+
+      {/* BOTÓN SIGUIENTE */}
 
       <button
         className="carousel-control-next portfolio-control"
         type="button"
-        data-bs-target="#portfolioCarousel"
+        data-bs-target={`#${carouselId}`}
         data-bs-slide="next"
       >
-        <span className="portfolio-arrow">→</span>
+
+        <span className="portfolio-arrow">
+          →
+        </span>
 
         <span className="visually-hidden">
           Siguiente
         </span>
+
       </button>
 
     </div>

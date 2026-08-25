@@ -1,13 +1,72 @@
 /* =========================================
+   RESET / BASE
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #071426;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+main {
+  width: 100%;
+}
+
+main > section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  scroll-margin-top: 90px;
+}
+
+
+/* =========================================
    HERO
 ========================================= */
 
 .hero {
   width: 100%;
   min-height: 100vh;
-
   background: #071426;
-
   color: #ffffff;
 
   padding: 0 7%;
@@ -23,7 +82,6 @@
 .navbar {
   width: 100%;
   height: 90px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,8 +121,7 @@
   font-size: 15px;
   font-weight: 500;
 
-  transition:
-    color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -78,23 +135,24 @@
 
 .hero-container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
 
   min-height: calc(100vh - 90px);
 
   margin: 0 auto;
 
-  display: flex;
+  display: grid;
+
+  grid-template-columns: 330px minmax(0, 1fr) 150px;
 
   align-items: center;
-  justify-content: center;
 
-  gap: 110px;
+  gap: 70px;
 }
 
 
 /* =========================================
-   PHOTO
+   HERO PHOTO
 ========================================= */
 
 .hero-photo {
@@ -107,8 +165,7 @@
 
   overflow: hidden;
 
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
 
   animation: photoAppear 1s ease forwards;
 }
@@ -124,10 +181,11 @@
 
 
 /* =========================================
-   CONTENT
+   HERO CONTENT
 ========================================= */
 
 .hero-content {
+  width: 100%;
   max-width: 600px;
 
   animation: contentAppear 1s ease forwards;
@@ -178,7 +236,7 @@
 
   color: #aab7c8;
 
-  font-size: 18px;
+  font-size: 16px;
 
   line-height: 1.8;
 }
@@ -206,8 +264,7 @@
   font-size: 16px;
   font-weight: 600;
 
-  transition:
-    color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .hero-link span {
@@ -215,8 +272,7 @@
 
   font-size: 24px;
 
-  transition:
-    transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .hero-link:hover {
@@ -229,184 +285,7 @@
 
 
 /* =========================================
-   ANIMATIONS
-========================================= */
-
-@keyframes photoAppear {
-
-  from {
-    opacity: 0;
-
-    transform:
-      translateX(-30px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateX(0);
-  }
-
-}
-
-
-@keyframes contentAppear {
-
-  from {
-    opacity: 0;
-
-    transform:
-      translateX(30px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      translateX(0);
-  }
-
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-  .hero {
-    padding: 0 5%;
-  }
-
-  .hero-container {
-    gap: 60px;
-  }
-
-  .hero-photo {
-    width: 270px;
-    height: 270px;
-  }
-
-  .hero-content h1 {
-    font-size: 60px;
-  }
-
-  .nav-links {
-    gap: 20px;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-  .hero {
-    padding: 0 25px;
-  }
-
-  /* NAVBAR */
-
-  .navbar {
-    height: 80px;
-  }
-
-  .logo {
-    font-size: 19px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-
-  /* HERO */
-
-  .hero-container {
-    min-height: calc(100vh - 80px);
-
-    flex-direction: column;
-
-    text-align: center;
-
-    gap: 45px;
-
-    padding: 50px 0;
-  }
-
-
-  /* PHOTO */
-
-  .hero-photo {
-    width: 220px;
-    height: 220px;
-  }
-
-
-  /* TEXT */
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-intro {
-    font-size: 12px;
-
-    letter-spacing: 3px;
-  }
-
-  .hero-content h1 {
-    font-size: 52px;
-
-    letter-spacing: -2.5px;
-
-    line-height: 1;
-  }
-
-  .hero-description {
-    font-size: 16px;
-
-    line-height: 1.7;
-
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-link {
-    justify-content: center;
-  }
-
-}
-
-/* =========================================
-   HERO CONTAINER
-========================================= */
-
-.hero-container {
-  width: 100%;
-  max-width: 1200px;
-
-  min-height: calc(100vh - 90px);
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 330px 1fr 150px;
-
-  align-items: center;
-
-  gap: 80px;
-}
-
-
-/* =========================================
-   CONTACTO
+   CONTACTO HERO
 ========================================= */
 
 .hero-contact {
@@ -457,17 +336,35 @@
   transform: translateX(5px);
 }
 
-@media (max-width: 700px){
-    .hero-container {
-        grid-template-columns: 1fr;
-    }
-    .hero-photo-container {
-  display: none;
-   }
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes photoAppear {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
+@keyframes contentAppear {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
 
-/*ABOUTTTTTTTTTTTTTTTT*/
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 /* =========================================
    ABOUT
@@ -475,17 +372,20 @@
 
 .about {
   width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
 
   background: #071426;
-
   color: #ffffff;
 
-  padding: 140px 7%;
+  padding: 100px 7%;
 }
 
 
 /* =========================================
-   CONTAINER
+   ABOUT CONTAINER
 ========================================= */
 
 .about-container {
@@ -495,13 +395,24 @@
   margin: 0 auto;
 }
 
+.about-container-projects {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
 
 /* =========================================
-   HEADER
+   ABOUT HEADER
 ========================================= */
 
 .about-header {
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+}
+
+.about-header-projects {
+  margin-bottom: 70px;
 }
 
 .about-label {
@@ -526,16 +437,20 @@
 
   letter-spacing: -3px;
 }
-.about-header h3{
 
+.about-header h3 {
   font-size: clamp(42px, 5vw, 64px);
+
   font-weight: 700;
+
   letter-spacing: -3px;
-  color: #071426
+
+  color: #071426;
 }
 
+
 /* =========================================
-   CONTENT
+   ABOUT CONTENT
 ========================================= */
 
 .about-content {
@@ -543,7 +458,7 @@
 
   grid-template-columns: 0.8fr 1.2fr;
 
-  gap: 100px;
+  gap: 80px;
 
   padding-top: 50px;
 
@@ -552,7 +467,7 @@
 
 
 /* =========================================
-   TITLE
+   ABOUT TITLE
 ========================================= */
 
 .about-title span {
@@ -579,7 +494,7 @@
 
 
 /* =========================================
-   TEXT
+   ABOUT TEXT
 ========================================= */
 
 .about-text {
@@ -602,71 +517,8 @@
 
 
 /* =========================================
-   TABLET
+   PROJECTS / CAROUSEL
 ========================================= */
-
-@media (max-width: 900px) {
-
-  .about {
-    padding: 110px 5%;
-  }
-
-  .about-content {
-    grid-template-columns: 1fr;
-
-    gap: 50px;
-  }
-
-  .about-header {
-    margin-bottom: 70px;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-  .about {
-    padding: 90px 25px;
-  }
-
-  .about-header {
-    margin-bottom: 60px;
-  }
-
-  .about-header h2 {
-    font-size: 42px;
-
-    letter-spacing: -2px;
-  }
-
-  .about-content {
-    gap: 35px;
-
-    padding-top: 35px;
-  }
-
-  .about-title h3 {
-    font-size: 28px;
-  }
-
-  .about-text p {
-    font-size: 16px;
-
-    line-height: 1.8;
-  }
-
-}
-
-
-/*Carrousel*/
-/*Carrousel*/
-/*Carrousel*/
-/*Carrousel*/
 
 .portfolio-carousel {
   width: 100%;
@@ -677,20 +529,20 @@
   background: transparent;
 }
 
-
-/* IMAGEN */
-
 .portfolio-carousel .carousel-item {
   text-align: center;
 }
 
+
+/* IMAGEN */
+
 .portfolio-image {
   width: 100%;
-  height: 500px;
+  height: 400px;
+
   object-fit: contain;
 
   display: block;
-
 
   border-radius: 12px;
 }
@@ -707,7 +559,7 @@
 .portfolio-info h3 {
   margin: 0 0 8px;
 
-  color: #ffffff;
+  color: #071426;
 
   font-size: 28px;
   font-weight: 600;
@@ -720,7 +572,7 @@
 
   margin: 0 0 15px;
 
-  color: #aab7c8;
+  color: #071426;
 
   font-size: 16px;
 
@@ -744,7 +596,9 @@
 }
 
 
-/* FLECHAS */
+/* =========================================
+   CAROUSEL CONTROLS
+========================================= */
 
 .portfolio-control {
   width: 55px;
@@ -773,13 +627,15 @@
 
   background: #071426;
 
-  color: white;
+  color: #ffffff;
 
   font-size: 17px;
 }
 
 
-/* INDICADORES */
+/* =========================================
+   CAROUSEL INDICATORS
+========================================= */
 
 .portfolio-carousel .carousel-indicators {
   position: absolute;
@@ -814,10 +670,233 @@
 
 
 /* =========================================
+   CERTIFICACIONES
+========================================= */
+
+.certificaciones {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #071426;
+
+  color: white;
+
+  padding: 100px 7%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .hero-container {
+    grid-template-columns: 280px minmax(0, 1fr);
+
+    gap: 60px;
+  }
+
+  .hero-contact {
+    display: none;
+  }
+
+  .hero-photo {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  /* HERO */
+
+  .hero {
+    padding: 0 5%;
+  }
+
+  .hero-container {
+    gap: 50px;
+  }
+
+  .hero-photo {
+    width: 270px;
+    height: 270px;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+    padding: 100px 5%;
+    padding-bottom: 20px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .about-header {
+    margin-bottom: 40px;
+  }
+
+
+  /* PROJECTS */
+
+  .portfolio-carousel {
+    max-width: 900px;
+  }
+}
+
+
+/* =========================================
    MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
+
+  /* SECCIONES */
+
+  main > section {
+    min-height: 100vh;
+
+    scroll-margin-top: 80px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 100vh;
+
+    padding: 0 25px;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar {
+    height: 80px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+
+  /* HERO CONTAINER */
+
+  .hero-container {
+    min-height: calc(100vh - 80px);
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 50px 0;
+
+    text-align: center;
+  }
+
+
+  /* PHOTO */
+
+  .hero-photo {
+    width: 220px;
+    height: 220px;
+
+    margin: 0 auto;
+  }
+
+
+  /* CONTENT */
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-intro {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+
+    letter-spacing: -2.5px;
+
+    line-height: 1;
+  }
+
+  .hero-description {
+    max-width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .hero-link {
+    justify-content: center;
+  }
+
+
+  /* ABOUT */
+
+  .about {
+    min-height: 100vh;
+
+    padding: 90px 25px;
+  }
+
+  .about-header {
+    margin-bottom: 50px;
+  }
+
+  .about-header h2 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .about-content {
+    gap: 35px;
+
+    padding-top: 35px;
+  }
+
+  .about-title h3 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+
+  /* PROJECTS */
 
   .portfolio-image {
     height: 280px;
@@ -845,10 +924,41 @@
     bottom: 105px;
   }
 
+
+  /* CERTIFICACIONES */
+
+  .certificaciones {
+    min-height: 100vh;
+    background-color: #071426 ;
+    padding: 90px 25px;
+  }
 }
-.certificaciones{
-  width: 100%;
-  color: #071426;
-  background: #ffffff;
-  padding: 140px 7%;
+
+
+/* =========================================
+   MOBILE PEQUEÑO
+========================================= */
+
+@media (max-width: 450px) {
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .hero-photo {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero-container {
+    gap: 30px;
+  }
+
+  .about-header h2 {
+    font-size: 36px;
+  }
+
+  .portfolio-image {
+    height: 230px;
+  }
 }

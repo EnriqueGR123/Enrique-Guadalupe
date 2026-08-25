@@ -3,24 +3,7 @@ import Contact from './Contact';
 function Hero() {
   return (
     <section className="hero" id="inicio">
-
-      <nav className="navbar">
-
-        <a href="#inicio" className="logo">
-          Enrique Gabriel
-        </a>
-
-        <div className="nav-links">
-          <a href="#inicio">Inicio</a>
-          <a href="#sobre-mi">Sobre mí</a>
-          <a href="#habilidades">Habilidades</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#contacto">Contacto</a>
-        </div>
-
-      </nav>
-
-
+      <br /><br /><br />
       {/* HERO */}
       <div className="hero-container">
 
@@ -51,8 +34,9 @@ function Hero() {
           </h1>
 
           <p className="hero-description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, ipsa ipsam nihil consectetur animi fugiat, sed totam voluptate maxime voluptates neque! Ipsam dolorum amet incidunt ullam. Quod fuga necessitatibus dicta!
-          </p>
+              Estudiante Inteligencia Artificial y Ciencia de Datos,
+              apasionado por crear soluciones tecnologicas  que combinan desarrollo de software, inteligencia artificial y automatización.
+              </p>
 
           <a
             href="#proyectos"

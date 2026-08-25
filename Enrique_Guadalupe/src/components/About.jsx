@@ -1,3 +1,4 @@
+import Timeline from './Timeline'
 
 function About() {
   return (
@@ -25,12 +26,9 @@ function About() {
 
           <div className="about-title">
 
-            <span>01</span>
-
             <h3>
               ¿Quién soy?
             </h3>
-
           </div>
 
 
@@ -39,17 +37,13 @@ function About() {
           <div className="about-text">
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In provident praesentium sequi, ad, aliquam dolore incidunt tempore impedit sint beatae similique explicabo dolorum vel! Ratione culpa exercitationem est non quas.
+              Estudiante de Licenciatura en Inteligencia Artificial y Ciencia de Datos, con experiencia en infraestructura tecnológica, soporte a centros de datos y administración de servidores adquirida en IBM y Foxconn. Participante del programa P- TECH by IBM, con conocimientos en Python, SQL y Linux, orientado al desarrollo de soluciones back-end, IA y automatización
+
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illum beatae veniam eos non perferendis repellendus dolorem voluptas saepe voluptatem voluptate impedit consequuntur suscipit voluptatibus at aliquid, ratione consequatur aut!.
+              <Timeline />
             </p>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, voluptatum! Voluptas, quibusdam? Quisquam, voluptatum.
-            </p>
-
           </div>
 
         </div>

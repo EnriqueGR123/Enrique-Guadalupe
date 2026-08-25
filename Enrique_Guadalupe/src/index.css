@@ -5,8 +5,9 @@
 * {
   margin: 0;
   padding: 0;
-
+  object-fit: cover;
   box-sizing: border-box;
+
 }
 
 
@@ -47,6 +48,3 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-#projects{
-  display: block;
-}
