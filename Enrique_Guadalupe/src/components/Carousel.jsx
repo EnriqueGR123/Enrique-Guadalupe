@@ -36,13 +36,18 @@ function Carousel({ items, carouselId = "portfolioCarousel" }) {
               {item.link && (
                 <a
                   href={item.link}
+                  className="portfolio-link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="portfolio-link"
+                  onClick={(e) => {
+                    e.stopPropagation();  
+                  }}
+                  style={{ position: 'relative', zIndex: 10, color:'#007bff', textDecoration: 'none' }}  
                 >
                   Ver proyecto →
                 </a>
               )}
+
 
             </div>
 
@@ -52,28 +57,10 @@ function Carousel({ items, carouselId = "portfolioCarousel" }) {
       </div>
 
 
-      {/* INDICADORES */}
 
-      <div className="carousel-indicators">
-
-        {items.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            data-bs-target={`#${carouselId}`}
-            data-bs-slide-to={index}
-            className={index === 0 ? "active" : ""}
-            aria-current={
-              index === 0 ? "true" : undefined
-            }
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
-
-      </div> <br /><br />
+      
 
 
-      {/* BOTÓN ANTERIOR */}
 
       <button
         className="carousel-control-prev portfolio-control"
@@ -93,8 +80,6 @@ function Carousel({ items, carouselId = "portfolioCarousel" }) {
       </button>
 
 
-      {/* BOTÓN SIGUIENTE */}
-
       <button
         className="carousel-control-next portfolio-control"
         type="button"
@@ -111,6 +96,8 @@ function Carousel({ items, carouselId = "portfolioCarousel" }) {
         </span>
 
       </button>
+
+    
 
     </div>
   );

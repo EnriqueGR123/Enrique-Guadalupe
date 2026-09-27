@@ -1,4 +1,4 @@
-import me from './assets/me.jpeg';
+import me from './assets/me.webp';
 import Contact from './Contact';
 function Hero() {
   return (

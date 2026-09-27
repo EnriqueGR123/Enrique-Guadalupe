@@ -15,13 +15,13 @@ export default function OppositeContentTimeline() {
             color: 'white',
           }}
         >
-         Tecnolo Profesional en Sistemas Informaticos
+        Tecnólogo profesional en Sistemas Informáticos 
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineDot />
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>Politecnica de GDL </TimelineContent>
+        <TimelineContent>Politécnica de Guadalajara</TimelineContent>
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
@@ -29,7 +29,7 @@ export default function OppositeContentTimeline() {
             color: 'white',
             }}
         >
-        Tecnico Superior en Sistemas Informaticos 
+        Técnico Superior en Sistemas Informáticos
         </TimelineOppositeContent>
         <TimelineSeparator>
         <TimelineDot />
@@ -43,7 +43,7 @@ export default function OppositeContentTimeline() {
             color: 'white',
             }}
         >
-        Lic. Inteligencia Artifical y Ciencia de Datos  
+        Lic. Inteligencia Artificial y Ciencia de Datos  
         </TimelineOppositeContent>
         <TimelineSeparator>
             <TimelineDot />

@@ -28,10 +28,6 @@ function App() {
           <Certifications />
         </section>
 
-        <section id="habilidades">
-          <Footer />
-        </section>
-
         
       </main>
     </>

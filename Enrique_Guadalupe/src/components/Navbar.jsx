@@ -1,4 +1,3 @@
-import React from "react";
 
 function Navbar() {
   return (
@@ -44,6 +43,14 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href="#certificaciones">
                 Certificaciones
+              </a>
+            </li>
+            
+            <li className="nav-item">
+              <a className="nav-link"  
+              href="/Santos_Enrique_Resume.pdf"  
+              target="_blank" rel="noopener noreferrer">
+                CV
               </a>
             </li>
 

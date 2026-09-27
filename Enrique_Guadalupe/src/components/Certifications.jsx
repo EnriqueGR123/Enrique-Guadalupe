@@ -1,10 +1,9 @@
-import React from 'react'
-import backend from './assets/backend.jpeg'
-import bootstrap from './assets/bootstrap.jpeg'
-import programming from './assets/programming_python.jpeg'
-import react from './assets/react.jpeg'
-import db from './assets/db.jpeg'
-import version from './assets/version.jpeg'
+import backend from './assets/backend.webp'
+import bootstrap from './assets/bootstrap.webp'
+import programming from './assets/programming_python.webp'
+import react from './assets/react.webp'
+import db from './assets/db.webp'
+import version from './assets/version.webp'
 
 import Carousel from './Carousel'
 

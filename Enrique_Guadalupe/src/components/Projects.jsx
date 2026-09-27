@@ -3,6 +3,12 @@ import Carousel from './Carousel';
 export default function Projects() {
   const proyectos = [
     {
+      image:'https://tcservi.com/wp-content/uploads/2025/05/analisis-de-datos.jpg',
+      title: "Data Analyzer API ",
+      description:'API REST, para el análisis de datos, que permite a los usuarios cargar conjuntos de datos en formato CSV y realizar análisis estadísticos y visualizaciones de manera eficiente. La API proporciona endpoints para calcular estadísticas descriptivas, generar gráficos y exportar resultados en diferentes formatos.',
+      link: 'https://github.com/EnriqueGR123/data-analyzer-api'
+    },
+    {
       image:'https://http2.mlstatic.com/D_NQ_NP_918596-MLA101412871636_122025-B.webp',
       title: "SIMP",
       description:

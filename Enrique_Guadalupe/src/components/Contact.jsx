@@ -8,7 +8,7 @@ const Contact = () => {
 
           <div className="contact-line"></div>
 
-          <a href="enkikegpe99@gmail.com">
+          <a href="mailto:enkikegpe99@gmail.com">
             Email
           </a>
 
